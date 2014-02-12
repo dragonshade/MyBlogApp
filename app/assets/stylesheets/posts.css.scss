@@ -1,0 +1,74 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bootstrap";
+
+@font-face{
+	font-family: xfiles;
+	src: url('/assets/font/x-files.ttf');
+}
+@font-face{
+	font-family: cubic;
+	src: assets-url('cubic.ttf');
+}
+
+@font-face{
+	font-family:string_literal;
+	src: url('/assets/font/StrLit.ttf');
+}
+
+#hero{
+	margin-top:30px;
+	margin-left: auto;
+	margin-right: auto;
+	width:1280px;
+	height:350px;
+	background-color:black;
+}
+
+#content-wrapper{
+
+	margin-left: auto;
+	margin-right: auto;
+	width:1280px;
+	height:900px;
+	background-color:yellow;
+
+	#left{
+		margin-top:10px;
+		margin-left:30px;
+		width:210px;
+		height:900px;
+		background-color:green;
+		float:left;
+	}
+
+	#content-right-wrapper{
+		margin-top:10px;
+		float:right;
+		width:1000px;
+		height:900px;
+
+		#center{
+
+			width:700px;
+			height:90%;
+			background-color:blue;
+			float:left;
+		}
+
+		#right{
+			margin-right:20px;
+		    width:250px;
+		    height:90%;
+			background-color:purple;
+			float:right;
+
+			#login{
+				font-family:cubic;
+				padding:10px;
+			}
+		}
+	}
+}
