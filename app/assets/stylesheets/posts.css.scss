@@ -4,6 +4,10 @@
 
 @import "bootstrap";
 
+$leftcolheight:800px;
+$centercolheight:1000px;
+$rightcolheight:600px;
+
 @font-face{
 	font-family: xfiles;
 	src: url('/assets/font/x-files.ttf');
@@ -23,34 +27,39 @@
 
 	background-color:black;
 	color:white;
-	height:300px;
-	padding-bottom: 5px;
+	height:250px;
 }
 
 #content-wrapper{
-	padding:10px;
-	background-color:yellow;
+	background-image: url("public\images\DigitalNomads.jpg");
 
 	#left{
-
-		background-color:green;
-
+		padding:5px;
+		height:$leftcolheight;
+		border-style:true;
+		border-left:thick;
 	}
 
 	#center{
-
-			background-color:blue;
+			padding:10px;
+			border-style:true;
+		    border-left:thick;
+		    border-right:thick;
+			height:$centercolheight;
 	}
 
 	#right{
-			
-		background-color:purple;
-		
-
+		padding:5px;	
+		height:$rightcolheight;
+		border-style:true;
+		border-right:thick;
 		#login{
 			font-family:cubic;
 			padding:10px;
 		}
 	}
 	
+	#footer{
+
+	}
 }
