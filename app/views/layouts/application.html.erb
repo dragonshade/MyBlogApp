@@ -9,20 +9,23 @@
 
   <body>
 
-
-<div id="hero">
+<div class="row">
+	<div id="hero" class="col-xs-12 col-md-12">
+		<h1> xxSkarlitxx Ran's Blog </h1>
+	</div>
 </div>
-<div id="content-wrapper">
-	<div id="left">
-	</div>
-	<div id="content-right-wrapper">
-		<div id="center">
-			<%= yield %>
+<div class="row">
+		<div id="left" class="col-xs-2 col-sm-2">
+			Crazy
 		</div>
-		<div id="right">
-			<%= render 'partials/login' %>
-		<div>
-	</div>
+		<div id="center" class="col-xs-7 col-sm-7">
+				<%= yield %>
+		</div>
+
+		<div id="right" class="col-xs-3 col-sm-3">
+				<%= render 'partials/login' %>
+		</div>
+
 </div>
 
 <div id="foot">
