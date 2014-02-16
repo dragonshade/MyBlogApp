@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
 
 
 	def User.new_remember_token
-		SecureRandom.ursafe_base64
+		SecureRandom.urlsafe_base64
 	end
 
 	def User.encrypt(token)

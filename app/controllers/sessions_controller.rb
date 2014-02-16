@@ -8,13 +8,16 @@ class SessionsController < ApplicationController
 		if user && user.authenticate(user_params[:password])
 			#if authentication sucessful
 			sign_in(user)
-			render 'posts/index'
+			redirect_to posts_url
 		else
-			render 'posts/index'
+			redirect_to posts_url
 		end
 	end
 
 	def destroy
+		@current_user = nil
+		cookies[:remember_me]=""
+		redirect_to posts_url
 	end
 
 	
