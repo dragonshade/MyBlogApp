@@ -1,5 +1,7 @@
-<div class="col-xs-12">
-  <div class="form-group">
+ 
+
+<!--
+ <div class="form-group">
     <label for="userid">UserId</label>
     <input type="email" class="form-control" id="userid" placeholder="user id">
   </div>
@@ -9,4 +11,13 @@
   </div>
   <button type="submit" class="btn btn-default">Submit</button>
 </form>
-</div>
+-->
+
+<%= form_for :session, url: sessions_path, html:{class:"form-group"} do |f| %>
+	<%= f.label :name %> <br>
+	<%= f.text_field :name, class:"form-control" %> <br>
+
+	<%= f.label :password %> <br>
+	<%= f.password_field :password , class:"form-control"%> <br>
+	<%= f.submit "Login", class:"btn btn-default"  %>
+<% end %>
