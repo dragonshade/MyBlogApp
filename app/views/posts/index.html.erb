@@ -1,1 +1,8 @@
-<h1>Skarlit</h1>
+<h1>Say, </h1>
+<p> If you have \(n\) people assigned to n seats, what are the chances that none of them sit on their assigned seats if they sit randomly? <p>
+
+<p> If \(g_k = \) Number of ways none of the \(k\) people sits on their seats </p> <br>
+<p> And if \(f_k= \) Number of ways at least one person out of the total \(k\) gets to sit on their seats </p> <br>
+<p> \(g_n + f_n = n! \) since they exhaust all scenarios </p> <br>
+<p> \(f_n = \sum_{k=0}^n \binom{n}{k} g_{n-k} \) since \(f_n\) can be decomposed into fixing \(k\) people on their seats and the rest \(n-k\) not on their seats. </p><br>
+<p> So \(g_n = n!- \sum_{k=0}^n \binom{n}{k} g_{n-k}\) where \(g_0=g_1=0, g_2=1\)</p>
