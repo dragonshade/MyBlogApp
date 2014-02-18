@@ -15,6 +15,8 @@
 
 <div class="container">
 	<div class="row">
+	   <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
 		<div id="hero" class="col-xs-12 col-md-12">
 			<%= render 'partials/banner'%>
 		</div>
@@ -28,9 +30,9 @@
 
 			<div id="right" class="col-xs-3 col-sm-3">
 				<div class="col-xs-12">
-					<% if sign_in? %>
-					 	Signed in. <br>
-					 	<%=link_to 'sign_out', logout_path, method: :delete%>
+					<% if user_signed_in?%>
+					   Signed in as <%= current_user.email %> <br>
+					   <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
 					<% else %>
 					<%= render 'partials/login' %>
 					<% end %>

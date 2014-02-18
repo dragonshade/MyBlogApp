@@ -7,6 +7,7 @@ gem 'rails-backbone'
 
 gem 'bcrypt-ruby'
 
+gem 'devise', '3.2.2'
 
 # Use sqlite3 as the database for Active Record
 group :development do
