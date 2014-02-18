@@ -3,9 +3,11 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
-gem 'rails-backbone'
+gem 'back'
 
 gem 'bcrypt-ruby'
+
+gem 'backbone-on-rails'
 
 gem 'devise', '3.2.2'
 

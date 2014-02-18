@@ -4,6 +4,12 @@ Blog::Application.routes.draw do
   devise_for :users
   root "posts#index"
 
+  get "posts/list_posts"
+  #get "posts/:id"
+  #get "posts/index"
+
+  resources :posts
+
   namespace :admin do
     resources :posts
   end
