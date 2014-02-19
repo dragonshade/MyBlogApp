@@ -1,0 +1,7 @@
+<div class="title col-xs-12 col-sm-12">
+<%= @post.get('title') %>
+</div>
+
+<div class="article col-xs-12 col-sm-12"> 
+ <%= @post.get('body') %>
+</div>"
