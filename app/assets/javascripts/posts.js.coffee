@@ -3,21 +3,3 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 
-$().ready ->
-  $("#menu_item_post").on "click", ->
-    $.getJSON "/posts/list_posts", (resp) ->
-    	  list resp
-      return
-
-    return
-
-  return
-
-
-
- list(json_data) ->
- 	$.each resp , (key,value) ->
- 					alert(key+ ": "+value)
- 		return
- return
-

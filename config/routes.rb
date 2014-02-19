@@ -2,9 +2,12 @@ Blog::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   devise_for :users
+
   root "posts#index"
 
-  get "posts/list_posts"
+  scope "bb" do
+     get "posts/list_posts", to: "posts#list_posts" , defaults: {format: :json}
+  end
   #get "posts/:id"
   #get "posts/index"
 

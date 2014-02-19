@@ -34,4 +34,8 @@ ActiveAdmin.register Post do
     redirect_to :back
   end
 
+  member_action :show do
+    post = Post.find_by(params[:id])
+  end
+
 end

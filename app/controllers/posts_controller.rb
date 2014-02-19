@@ -1,6 +1,5 @@
 class PostsController < ApplicationController
   before_filter :authenticate_user!, :except => [:show, :index, :list_posts]
-
   def index
   end
 
@@ -14,13 +13,7 @@ class PostsController < ApplicationController
   end
 
   def list_posts
-      @posts = Post.all
-      post_hash={}
-      @posts.each {|p| post_hash[p.id]=p.title}
-
-      respond_to do |format|       
-         format.json { render json: post_hash }
-      end
+      render json: Post.select(:id,:title).limit(20).order('id desc')
   end
 
   def show
