@@ -109,6 +109,19 @@ $rightcolheight:600px;
 		    border-left:thick;
 		    border-right:thick;
 			height:$centercolheight;
+
+			.title{
+				text-align: center;
+				font-size: 300%;
+			}
+			.article{
+				text-align: center;
+				font-size: 200%;
+			  
+				li{
+					list-style:none;
+				}
+			}
 	}
 
 	#right{
@@ -129,3 +142,5 @@ $rightcolheight:600px;
 		}
 	}
 }
+
+

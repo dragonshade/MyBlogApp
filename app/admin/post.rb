@@ -20,22 +20,20 @@ ActiveAdmin.register Post do
     default_actions
   end
 
-  member_action :create do
-     user_params= params.require(:post).permit(:title,:body)
-     post =Post.new(user_params)
-     post.save
-     redirect_to :back
-   end
+  # member_action :create do
+  #    user_params= params.require(:post).permit(:title,:body)
+  #    post =Post.new(user_params)
+  #    post.save
+  #  end
 
-   member_action :update do 
-    post = Post.find_by(params[:id])
-    post.update_attribute(:title, params[:title])
-    post.update_attribute(:body, params[:body])
-    redirect_to :back
-  end
+  #  member_action :update do 
+  #   post = Post.find_by(params[:id])
+  #   post.update_attribute(:title, params[:title])
+  #   post.update_attribute(:body, params[:body])
+  # end
 
-  member_action :show do
-    post = Post.find_by(params[:id])
-  end
+  # member_action :show do
+  #   post = Post.find_by(params[:id])
+  # end
 
 end

@@ -6,6 +6,7 @@ Blog::Application.routes.draw do
   root "posts#index"
 
   scope "bb" do
+     get "postsjson/:id", to: "posts#postsjson", defaults: {format: :json}
      get "posts/list_posts", to: "posts#list_posts" , defaults: {format: :json}
   end
   #get "posts/:id"

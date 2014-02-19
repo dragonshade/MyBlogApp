@@ -1,3 +1,6 @@
-<h1> Index </h1>
+<div class="title col-xs-12 col-sm-12">Posts Archive
+</div>
 
-<%= @posts['models'].length %>
+<div class="article col-xs-12 col-sm-12" id="entries"> 
+
+</div>
