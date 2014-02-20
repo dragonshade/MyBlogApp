@@ -1,0 +1,1 @@
+class Blog.Views.BackButton extends Backbone.View

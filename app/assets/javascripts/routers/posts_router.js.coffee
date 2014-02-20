@@ -10,10 +10,10 @@ class Blog.Routers.Posts extends Backbone.Router
 
   show: (post_id) ->
     @model = new Blog.Models.Post({id: post_id})
-    @model.fetch({reset: true})
+    @model.fetch()
     view = new Blog.Views.Post(model: @model)
-    $('#center').html(view.render().el)
-    return
+    $("#center").html(view.render().el)
+
 
       		 
        	
