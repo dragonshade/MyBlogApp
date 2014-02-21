@@ -1,7 +1,7 @@
 <div class="title col-xs-12 col-sm-12">
-<%= @post.get('title') %>
+<%- @post.get('title') %>
 </div>
 <% console.log @post.get('title') %>
 <div class="text col-xs-12 col-sm-12"> 
- <%= @post.get('body') %>
+ <%- @post.get('body') %>
 </div>
