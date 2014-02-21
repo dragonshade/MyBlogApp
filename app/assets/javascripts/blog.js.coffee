@@ -7,5 +7,8 @@ window.Blog =
   	new Blog.Routers.Posts()
   	Backbone.history.start()
 
+
 $(document).ready ->
   Blog.initialize()
+
+ 

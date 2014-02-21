@@ -1,5 +1,5 @@
 class Blog.Routers.Posts extends Backbone.Router
-  routes: 'posts/list' : 'list', 'posts/:id' : 'show'
+  routes: 'posts/list' : 'list','posts/:id' : 'show','' : 'render_template'
 
   list: ->
     @collection = new Blog.Collections.Posts()
@@ -13,6 +13,10 @@ class Blog.Routers.Posts extends Backbone.Router
     @model.fetch()
     view = new Blog.Views.Post(model: @model)
     $("#center").html(view.render().el)
+
+  render_template: ->
+    postButtonView= new Blog.Views.PostButton()
+    $('#menu').html(postButtonView.render().el)
 
 
       		 
