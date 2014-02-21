@@ -20,11 +20,33 @@ ActiveAdmin.register Post do
     default_actions
   end
 
-  # member_action :create do
-  #    user_params= params.require(:post).permit(:title,:body)
-  #    post =Post.new(user_params)
-  #    post.save
-  #  end
+  show do 
+    h1 post.title
+    h2 do
+      simple_format post.body
+    end
+  end
+
+  controller do
+    def create
+      user_params = params.require(:post).permit(:title,:body)
+      post =Post.new(user_params)
+      post.save
+      redirect_to action: 'index'
+    end
+
+    def update
+      user_params = params.require(:post).permit(:title,:body)
+      post = Post.find(params[:id])
+      post.update_attributes(user_params)
+      redirect_to action: 'index'
+    end
+
+
+    
+  end
+
+
 
   #  member_action :update do 
   #   post = Post.find_by(params[:id])
