@@ -8,6 +8,12 @@ $leftcolheight:1200px;
 $centercolheight:1000px;
 $rightcolheight:600px;
 
+
+body{
+	
+	background-color:white;
+}
+
 @font-face{
 	font-family: xfiles;
 	src: url('/assets/font/x-files.ttf');
@@ -95,14 +101,6 @@ $rightcolheight:600px;
 
 #content-wrapper{
 
-	#left{
-		padding:5px;
-		height:$leftcolheight;
-		border-style:true;
-		border-left:thick;
-		@include RedtoBlack();
-		}
-
 	#center{
 			padding:10px;
 			border-style:true;
@@ -111,20 +109,34 @@ $rightcolheight:600px;
 			height:$centercolheight;
 
 			.title{
-				text-align: center;
+				text-align: left;
 				font-size: 300%;
+				font-weight:bold;
 			}
 			.article{
 				text-align: center;
 				font-size: 200%;
-			  
-				li{
-					list-style:none;
-				}
+			  	color:#310000;
 			}
+
+			.status{
+				padding:10px;
+				font-size: 120%;
+				font-style:italic;
+			}
+
 			.text {
 				padding:10px;
 				font-size:120%;
+			}
+
+			.list-group{
+					list-style:none;
+			}
+
+			.list-group-item:hover{
+				background-color:#C3E1FF;
+				cursor:pointer;
 			}
 	}
 

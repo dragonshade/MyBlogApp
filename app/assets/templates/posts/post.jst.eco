@@ -1,7 +1,18 @@
-<div class="title col-xs-12 col-sm-12">
-<%- @post.get('title') %>
-</div>
-<% console.log @post.get('title') %>
-<div class="text col-xs-12 col-sm-12"> 
- <%- @post.get('body') %>
+
+<div class="panel panel-danger">
+	<div class="panel-heading">
+		<div class="title col-xs-12 col-sm-12">
+		<%- @post.get('title') %>
+		</div>
+		<div class="status col-xs-12 col-sm-12">
+		<%- "last update: "+ @post.get('updated_at') %>
+		</div>
+	</div>
+	<div class="panel-body">
+		<div class="text col-xs-12 col-sm-12"> 
+		<p>
+		 <%- @post.get('body') %>
+		</p>
+		</div>
+	</div>
 </div>

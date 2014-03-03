@@ -1,1 +1,4 @@
-<%= @entry.get('title') %>
+<li class="list-group-item">
+   <h4 class="list-group-item-heading"> <%= @entry.get('title') %> </h4>
+   <p class="list-group-item-text"> </p>
+</li>
