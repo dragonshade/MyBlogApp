@@ -5,15 +5,13 @@ class Blog.Routers.Posts extends Backbone.Router
     this.on('route', @render_template)
 
   render_template: ->
-    postButtonView= new Blog.Views.PostButton()
-    $('#postslist').html(postButtonView.render().el)
+    postButtonView=new Blog.Views.PostButton(el: "#postslist")
 
   list: ->
     @collection = new Blog.Collections.Posts()
     @collection.fetch({reset:true})
     view = new Blog.Views.PostsIndex(collection: @collection)
     $('#center').html(view.render().el)
-    return
 
   show: (post_id) ->
     @model = new Blog.Models.Post({id: post_id})
