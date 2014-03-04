@@ -13,7 +13,11 @@ class PostsController < ApplicationController
   end
 
   def list_posts
-      render json: Post.select(:id,:title).limit(20).order('id desc')
+       array = Post.select(:id,:title,:body).limit(20).order('id desc')
+       array.each { |post|
+           post.body=post.body[0...300]+"......."
+       }
+       render json: array
   end
 
   def postsjson

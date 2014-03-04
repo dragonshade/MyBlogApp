@@ -6,7 +6,7 @@ class Blog.Routers.Posts extends Backbone.Router
 
   render_template: ->
     postButtonView= new Blog.Views.PostButton()
-    $('#menu').html(postButtonView.render().el)
+    $('#postslist').html(postButtonView.render().el)
 
   list: ->
     @collection = new Blog.Collections.Posts()

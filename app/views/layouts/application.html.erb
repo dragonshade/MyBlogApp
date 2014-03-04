@@ -2,27 +2,35 @@
 <html>
 <head>
   <title>xXRanXieXxBlog</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
 
-    <script type="text/javascript"
-  		src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-	</script>
+ 	  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+	  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	  <%= csrf_meta_tags %>
+ 	  <script type="text/javascript"
+  		src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
   </head>
 
-  <body>
+<body>
 
 <div class="container">
 	<div class="row">
 	   <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
-		<div id="hero" class="col-xs-12 col-md-12">
-			<%= render 'partials/banner'%>
+		<div id="hero" class="jumbotron col-xs-12 col-md-12">
+			<div class="container">
+				<%= render 'partials/banner'%>
+				<div id="menu" class="col-xs-9 col-md-9">
+					<div class="btn-group">
+						<span id="postslist"> </span>
+						<span id="notes"> </span>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
-	<div id="content-wrapper" class="row">
-			<div id="center" class="col-xs-9 col-sm-9">
+	<div id="content-wrapper" class="row">	
+			<div id="center" class="col-xs-9 col-sm-9">	
 					<%= yield %>
 			</div>
 
@@ -41,7 +49,7 @@
 
 	<div class="row">
 		<div id="footer" class="col-xs-12 col-md-12">
-			<p> Last updated: <%= Time.now %> </p>
+			<p> Last updated: <%= Time.now %>...well,I lied :p</p>
 		</div>
 	</div>
 </div>

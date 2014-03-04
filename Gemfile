@@ -7,6 +7,8 @@ gem 'back'
 
 gem 'bcrypt-ruby'
 
+gem 'kaminari'
+
 gem 'backbone-on-rails'
 
 gem 'devise', '3.2.2'

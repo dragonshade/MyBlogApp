@@ -1,5 +1,1 @@
-   <div id="menu_item_post" class="col-xs-6 col-md-3 btn menu_item"> 
-   <span class="menu_item_text"> 
-   Posts 
-   </span>
-   </div>
+  <button type="button" class="btn btn-danger">Posts</button>
