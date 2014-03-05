@@ -1,0 +1,5 @@
+<li class="list-group-item">
+   <h4 class="list-group-item-heading"> <%= @entry.get('title') %> </h4>
+   <!--Strip of tags and echo raw html -->
+   <p class="list-group-item-text"> <%- @entry.get('body').replace(/<.+?>/g," ") %></p>
+</li>

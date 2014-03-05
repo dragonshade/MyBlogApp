@@ -1,6 +1,6 @@
 class Blog.Views.Post extends Backbone.View
 
-  template: JST['posts/post']
+  template: JST['posts/posts_content']
 
   initialize: ->
     @model.on('change',@render,this)

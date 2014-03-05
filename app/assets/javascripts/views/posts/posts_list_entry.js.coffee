@@ -1,6 +1,6 @@
 class Blog.Views.PostsView extends Backbone.View
 
-  template: JST['posts/view']
+  template: JST['posts/posts_list_entry']
   tagName: 'li'
 
   events:

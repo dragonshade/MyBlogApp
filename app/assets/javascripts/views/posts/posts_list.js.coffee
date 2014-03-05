@@ -1,6 +1,6 @@
 class Blog.Views.PostsIndex extends Backbone.View
 
-  template: JST['posts/index']
+  template: JST['posts/posts_list']
 
   initialize: ->
   	@collection.on('reset',@render,this)
