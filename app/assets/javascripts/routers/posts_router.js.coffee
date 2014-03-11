@@ -19,6 +19,5 @@ class Blog.Routers.Posts extends Backbone.Router
     view = new Blog.Views.Post(model: @model)
     $("#center").html(view.render().el)
 
-
       		 
        	
